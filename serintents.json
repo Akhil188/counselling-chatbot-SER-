@@ -1,0 +1,37 @@
+{"intents": [
+        {"tag": "angry",
+"responses": ["You seem angry, Learn to breathe. When you're angry.", "You seem angry,you might notice your breathing gets quicker and shallower.", "You seem angry, Progressive muscle relaxation might help.","You seem angry, Visualize yourself calm.",
+"You seem angry,Recognize your triggers.","You seem angry,Change your thinking.","you seem angry,Avoid dwelling on the same things."],
+         "context": [""]},
+{"tag": "sad",
+"responses": ["You seem sad,Smile more.", "You seem sad,Exercise for seven minutes.", "You seem sad,Spend more time with friends and family.","You seem sad, Go outside more often.",
+"You seem sad,Meditate.","You seem sad,Plan a trip (even if you don't ever take it).","you seem sad,Help other people."],
+         "context": [""] },
+{"tag": "fearful",
+"responses": ["You seem afraid,Take time out. It's impossible to think clearly when you're flooded with fear or anxiety.", "You seem afraid,Breathe through panic. If you start to get a faster heartbeat or sweating palms, the best thing is not to fight it.", "You seem afraid,Face your fears.","You seem afraid, Imagine the worst.",
+"You seem afraid,Visualise a happy place.","You seem afraid,Talk about it.","you seem afraid ,Don't try to be perfect."],
+         "context": [""]
+        },
+{"tag": "depressed",
+"responses": ["You seem depressed,Build a Support Network.", "You seem depressed,Reduce Your Stress.", "You seem depressed,Improve Your Sleep Hygiene.","You seem depressed, Learn How to Stop Negative Thoughts.",
+"You seem depressed,Get a Handle on Your Household Chores.","You seem depressed,Beat Procrastination.","you seem depressed,Improve Your Eating Habits."],
+ "context": [""]},
+{"tag": "disgust",
+"responses": ["You seem disgust,may be you should think different.", "You seem disgust,Reduce Your Stress.", "You seem disgust,Improve Your Sleep Hygiene.","You seem disgust, Learn How to Stop Negative Thoughts.",
+"You seem disgust,Get a Handle on Your Household Chores.","You seem disgust,Beat Procrastination.","you seem disgust,Improve Your Eating Habits."],
+ "context": [""]},
+{"tag": "happy",
+"responses": ["You seem happy,have a nice day.", "You seem happy,change is good for better.", "You seem happy, Your Sleep Hygiene is great.","You seem happy, your Thoughts should be positive .",
+"You seem happy,something good might happen to u today.","you seem happy, Your Eating Habits should be good ."],
+ "context": [""]}
+
+]
+
+  }
+
+
+
+
+
+
+
