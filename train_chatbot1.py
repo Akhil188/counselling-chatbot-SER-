@@ -75,7 +75,7 @@ training = np.array(training)
 train_x = list(training[:,0])
 train_y = list(training[:,1])
 print("Training data created")
-
+print(len(train_y[0]))
 
 # Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons
 # equal to number of intents to predict output intent with softmax

@@ -103,16 +103,7 @@ def extract_feature(file_name, mfcc, chroma, mel):
             mel=np.mean(librosa.feature.melspectrogram(X, sr=sample_rate).T,axis=0)
             result=np.hstack((result, mel))
     return result
-# def set_audio():
-#     t=sr.Recognizer()
-#     feature=extract_feature("C:/Users/Akhil/Desktop/ser/New folder/Actor_01/03-01-01-01-01-01-01.wav", mfcc=True, chroma=True, mel=True)   
-#     with sr.AudioFile("C:/Users/Akhil/Desktop/ser/New folder/Actor_01/03-01-01-01-01-01-01.wav") as source:   
-#         audio = t.listen(source)    
-#     try:
-#         print("Transcription: "+t.recognize_google(audio) )   
-#     except LookupError:                                
-#         print("Could not understand audio")
-#     return feature
+
 
 model = pickle.load(open("sermodel_pickle", 'rb'))
 # x_int=set_audio()
@@ -275,15 +266,18 @@ class ChatInterface(Frame):
             query=message
             self.text_box.configure(state=NORMAL)
             self.text_box.insert(END, pr1)
+            res = chatbot_response(user_input)
+            self.text_box.insert(END, "Bot: " + res + '\n\n')
             self.text_box.configure(state=DISABLED)
             self.text_box.see(END)
         else:
-            pr1=pr1 = "You: " + user_input + "\n"
+            pr1 = "You: " + user_input + "\n"
             query=user_input
             self.text_box.configure(state=NORMAL)
             self.text_box.insert(END, pr1)
             res = chatbot_response(user_input)
             self.text_box.insert(END, "Bot: " + res + '\n\n')
+            
             self.text_box.configure(state=DISABLED)
             self.text_box.see(END)
             msg = self.text_box.get("1.0",'end-1c').strip()
@@ -304,7 +298,19 @@ class ChatInterface(Frame):
         else:
             return "no defined emotion recognized" 
         
+    def set_audio(self):
+        t=sr.Recognizer()
+        feature=extract_feature("C:/Users/Akhil/Desktop/ser/New folder/Actor_03/03-01-03-02-01-02-03.wav", mfcc=True, chroma=True, mel=True)   
+        with sr.AudioFile("C:/Users/Akhil/Desktop/ser/New folder/Actor_03/03-01-03-02-01-02-03.wav") as source:   
+            audio = t.listen(source)    
+        try:
+            mes=t.recognize_google(audio) 
+            self.send_message_insert(mes)
+            self.send_message_bot(feature) 
+        except LookupError:                                
+            print("Could not understand audio")
         
+          
  
     def speech(self):
         self.ins_label = Label(self.text_box, font="Verdana 7", text="taking audio input to recognizing emotion ", bg=self.tl_bg2, fg=self.tl_fg)

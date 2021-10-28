@@ -1,0 +1,29 @@
+Project Info:
+Operating Syatem:Windows and Higher
+Dataset: Ravadess Dataset
+Techlologies:Python libraries, Machine Learning
+python packages used:tkinter,Librosa,keras,sklearn,pyaudio,numpy,soundfile,nltk
+
+datasets
+New folder:Contains Audio files.
+
+model creation
+SER.py:codes to train and create speech emotion recognition  ML models.
+train_chatbot1.py: codes to train and create text classification ML models.
+
+
+GUI:
+chatbot_gui1.py:regular chatbot gui.
+chatbotser.py: Speech emotion recognition chatbot gui.
+
+Json files:
+instants1.json: input json file for text recognition.
+serinstants.json: input json file for speech emotion recognition.
+
+pkl files:
+words.pkl, classes.pkl: outputs after natural language processing of input json file.
+
+  
+ 
+
+
