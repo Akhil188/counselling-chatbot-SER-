@@ -64,7 +64,8 @@ Follow the on-screen instructions to start a conversation with the chatbot.
 Project Structure
 bash
 Copy code
-counseling-speech-emotion-recognition/
+
+counseling-chatbot-SER-/
 ├── data/                  # Directory for storing datasets
 ├── models/                # Directory for storing trained models
 ├── src/                   # Source code for the project
